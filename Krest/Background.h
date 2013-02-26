@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Background : CCLayerColor {
-    
-}
+@interface Background : CCLayerColor {}
+@property float startHeight;
+@property float startWidth;
+@property float figureInPoints;
 
 @end

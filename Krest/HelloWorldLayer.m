@@ -54,6 +54,7 @@
 	if( self=[super initWithColor:ccc4(255,255,0,145)]) {
         self.optionShow = NO;
         self.size = [[CCDirector sharedDirector] winSize];
+        //self.size = CGSizeMake(640, 1136);
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"Krestiki-Noliki" fontName:@"Marker Felt" fontSize:64];
         
         
@@ -88,13 +89,12 @@
         [self addChild: self.menu];
         
         CCLabelTTF *autor = [CCLabelTTF labelWithString:@"by Sander" fontName:@"Marker Felt" fontSize:30];
-        [autor setPosition:ccp( self.size.width/2 + 200, self.size.height/2 - 130)];
+        [autor setPosition:ccp( self.size.width - 70, 30)];
         [self addChild:autor];
         
         CCMenu *menuOption = [CCMenu menuWithItems:self.itemKrestik, self.itemNolik, nil];
         menuOption.position = CGPointZero;
         [self addChild:menuOption];
-        
 	}
 	return self;
 }

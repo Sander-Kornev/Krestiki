@@ -13,6 +13,7 @@
 @property int player;
 @property int numberOfPlayers;
 @property BOOL computerMoved;
+@property Background* background;
 @end
 
 @implementation GameScene
@@ -22,48 +23,53 @@
 {
     if ( self = [super init])
     {
-        Background* background = [Background node];
-        [self addChild:background];
-        self.numberOfPlayers = [[[NSUserDefaults standardUserDefaults] valueForKey: @"NumberOfPlayers"] integerValue];
-        self.player = [[[NSUserDefaults standardUserDefaults] valueForKey:@"Player"] integerValue];
-        self.number = 0;
-        self.computerMoved = NO;
-        for (int i = 0; i < 9; i++) {
-            self.items[i] = 0;
-        }
-        self.items = [NSMutableArray new];
-        self.items = [[NSMutableArray alloc] initWithCapacity: 3];
-        for (int i = 0; i < 3; i++) {
-            [self.items insertObject:[NSMutableArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil] atIndex:i];
-        }
-        if (self.numberOfPlayers == 0)
-        {
-            [self schedule:@selector(makeMotion) interval:1 ];
-        } else if (self.numberOfPlayers == 1)
-        {
-            if (self.player == 1)
-            {
-                [self touchEnable];
-            } else if (self.player == 2)
-            {
-                [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
-            }
-        } else if (self.numberOfPlayers == 2)
-        {
-            [self touchEnable];
-        }
-
+        [self loadDefault];
+        [self startGame];
     }
     return self;
 
 }
 
+- (void)loadDefault
+{
+    self.background = [Background node];
+    [self addChild:self.background];
+    self.numberOfPlayers = [[[NSUserDefaults standardUserDefaults] valueForKey: @"NumberOfPlayers"] integerValue];
+    self.player = [[[NSUserDefaults standardUserDefaults] valueForKey:@"Player"] integerValue];
+    self.number = 0;
+    self.computerMoved = NO;
+    self.items = [NSMutableArray new];
+    self.items = [[NSMutableArray alloc] initWithCapacity: 3];
+    for (int i = 0; i < 3; i++) {
+        [self.items insertObject:[NSMutableArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil] atIndex:i];
+    }
+}
+
+- (void)startGame
+{
+    if (self.numberOfPlayers == 0)//if user chose computer game
+    {
+        [self schedule:@selector(makeMotion) interval:1 ];
+    } else if (self.numberOfPlayers == 1)
+    {
+        if (self.player == 1)
+        {
+            [self touchEnable];
+        } else if (self.player == 2)
+        {
+            [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
+        }
+    } else if (self.numberOfPlayers == 2)
+    {
+        [self touchEnable];
+    }
+}
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [self convertTouchToNodeSpace: touch];
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            CGRect rect = CGRectMake(164 + i * 80, 38 + j * 80, 80, 80);
+            CGRect rect = CGRectMake(self.background.startWidth + self.background.figureInPoints * i, self.background.startHeight + self.background.figureInPoints * j, self.background.figureInPoints, self.background.figureInPoints);
             if (CGRectContainsPoint(rect, location) && [self.items[i][j] integerValue] == 0) {
                 [self drawFigureeWithI:i J:j];
                 break;
@@ -84,7 +90,8 @@
         figure = [[CCSprite alloc] initWithFile: @"krug.png"];
          self.items[i][j] = [NSNumber numberWithInt: -1];
     }
-    figure.position = ccp( 204 + i * 80  , 78 + j * 80 );
+    CGPoint point = ccp(self.background.startWidth + self.background.figureInPoints * (i + 0.5)  , self.background.startHeight + self.background.figureInPoints * (j + 0.5));
+    [figure setPosition:point];
     [self addChild:figure];
     [self checkForWinOrDrawForI:i J:j];
     self.number++;
@@ -181,18 +188,19 @@
 {
     [self unscheduleAllSelectors];
     [self touchDisable];
+    CGSize size = [[CCDirector sharedDirector] winSize];
     CCLabelTTF *label = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:64];
     label.color = ccc3(255, 0, 0);
-    label.position = ccp(300, 0);
+    label.position = ccp(size.width/2, 0);
     [self addChild:label];
-    //[CCMenuItemFont setFontSize:30];
+    [CCMenuItemFont setFontSize:20];
     CCMenuItemFont* main = [CCMenuItemFont itemWithString:@"Go to Main Menu" target:self selector:@selector(mainMenu)];
     CCMenu* menu = [CCMenu menuWithItems:main, nil];
     menu.position = CGPointZero;
-    main.position = ccp(100, 150);
+    main.position = ccp(100, size.height - 50);
     menu.color = ccc3(0, 0, 255);
     [self addChild:menu];
-    id actionMove = [CCMoveTo actionWithDuration:2 position:CGPointMake(300, 280)];
+    id actionMove = [CCMoveTo actionWithDuration:2 position:CGPointMake(size.width/2, size.height - 30)];
     [label runAction:[CCSequence actions:actionMove, [CCDelayTime actionWithDuration:2],
                       [CCCallFunc actionWithTarget:self selector:@selector(gameOverDone)],
                       nil]];
@@ -255,7 +263,6 @@
 
 - (void)makeMotionForPlayer:(int)player
 {
-    //[NSThread sleepForTimeInterval:1];
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             //if I can win
