@@ -143,6 +143,7 @@
 		628658F816DCFB4C00B386D0 /* krug.png in Resources */ = {isa = PBXBuildFile; fileRef = 628658F616DCFB4C00B386D0 /* krug.png */; };
 		6288B7F216D295E000DDF603 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6288B7F116D295E000DDF603 /* GameScene.m */; };
 		628A4F2C16D3D34300CE4C88 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A4F2B16D3D34300CE4C88 /* Background.m */; };
+		628D393816DD113D005917A3 /* FinalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 628D393716DD113D005917A3 /* FinalScene.m */; };
 		6293094C16D680A800942462 /* playAgain.png in Resources */ = {isa = PBXBuildFile; fileRef = 6293094816D680A800942462 /* playAgain.png */; };
 		6293094D16D680A800942462 /* krest-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6293094916D680A800942462 /* krest-hd.png */; };
 		6293094E16D680A800942462 /* krug-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6293094A16D680A800942462 /* krug-hd.png */; };
@@ -150,6 +151,11 @@
 		6297798216DBA21500AD570B /* vertLine-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6297798116DBA21500AD570B /* vertLine-hd.png */; };
 		62CF87A616D371A400503502 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF87A416D371A400503502 /* moon.png */; };
 		62CF87A716D371A400503502 /* roket.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF87A516D371A400503502 /* roket.png */; };
+		62D7B78616DDFAB70075F20D /* krest-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7B78416DDFAB70075F20D /* krest-ipad.png */; };
+		62D7B78716DDFAB70075F20D /* krug-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7B78516DDFAB70075F20D /* krug-ipad.png */; };
+		62D7B78A16DE026D0075F20D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7B78916DE026D0075F20D /* Constants.m */; };
+		62D7B78D16DE09F90075F20D /* krest-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7B78B16DE09F90075F20D /* krest-ipadhd.png */; };
+		62D7B78E16DE09F90075F20D /* krug-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7B78C16DE09F90075F20D /* krug-ipadhd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -437,6 +443,8 @@
 		6288B7F116D295E000DDF603 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		628A4F2A16D3D34300CE4C88 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
 		628A4F2B16D3D34300CE4C88 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
+		628D393616DD113D005917A3 /* FinalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalScene.h; sourceTree = "<group>"; };
+		628D393716DD113D005917A3 /* FinalScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalScene.m; sourceTree = "<group>"; };
 		6293094816D680A800942462 /* playAgain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playAgain.png; path = ../../../../../Documents/playAgain.png; sourceTree = "<group>"; };
 		6293094916D680A800942462 /* krest-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krest-hd.png"; path = "../../../../../Documents/krest-hd.png"; sourceTree = "<group>"; };
 		6293094A16D680A800942462 /* krug-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krug-hd.png"; path = "../../../../../Documents/krug-hd.png"; sourceTree = "<group>"; };
@@ -444,6 +452,12 @@
 		6297798116DBA21500AD570B /* vertLine-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vertLine-hd.png"; path = "../../../../../Documents/vertLine-hd.png"; sourceTree = "<group>"; };
 		62CF87A416D371A400503502 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = SOURCE_ROOT; };
 		62CF87A516D371A400503502 /* roket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roket.png; sourceTree = SOURCE_ROOT; };
+		62D7B78416DDFAB70075F20D /* krest-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krest-ipad.png"; path = "../../../../../Documents/krest-ipad.png"; sourceTree = "<group>"; };
+		62D7B78516DDFAB70075F20D /* krug-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krug-ipad.png"; path = "../../../../../Documents/krug-ipad.png"; sourceTree = "<group>"; };
+		62D7B78816DE026C0075F20D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		62D7B78916DE026D0075F20D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		62D7B78B16DE09F90075F20D /* krest-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krest-ipadhd.png"; path = "../../../../../Documents/krest-ipadhd.png"; sourceTree = "<group>"; };
+		62D7B78C16DE09F90075F20D /* krug-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krug-ipadhd.png"; path = "../../../../../Documents/krug-ipadhd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,12 +520,16 @@
 				627C0B9A16D28D28003EB460 /* AppDelegate.m */,
 				627C0B9C16D28D28003EB460 /* HelloWorldLayer.h */,
 				627C0B9D16D28D28003EB460 /* HelloWorldLayer.m */,
+				62D7B78816DE026C0075F20D /* Constants.h */,
+				62D7B78916DE026D0075F20D /* Constants.m */,
 				627C0B9F16D28D28003EB460 /* IntroLayer.h */,
 				627C0BA016D28D28003EB460 /* IntroLayer.m */,
 				628A4F2A16D3D34300CE4C88 /* Background.h */,
 				628A4F2B16D3D34300CE4C88 /* Background.m */,
 				6288B7F016D295E000DDF603 /* GameScene.h */,
 				6288B7F116D295E000DDF603 /* GameScene.m */,
+				628D393616DD113D005917A3 /* FinalScene.h */,
+				628D393716DD113D005917A3 /* FinalScene.m */,
 				627C0A0C16D28D1E003EB460 /* Resources */,
 				627C0A2416D28D1F003EB460 /* libs */,
 				627C0B9516D28D28003EB460 /* Supporting Files */,
@@ -522,9 +540,13 @@
 		627C0A0C16D28D1E003EB460 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62D7B78B16DE09F90075F20D /* krest-ipadhd.png */,
+				62D7B78C16DE09F90075F20D /* krug-ipadhd.png */,
 				6293094816D680A800942462 /* playAgain.png */,
 				6293094916D680A800942462 /* krest-hd.png */,
 				6293094A16D680A800942462 /* krug-hd.png */,
+				62D7B78416DDFAB70075F20D /* krest-ipad.png */,
+				62D7B78516DDFAB70075F20D /* krug-ipad.png */,
 				628658F516DCFB4C00B386D0 /* krest.png */,
 				628658F616DCFB4C00B386D0 /* krug.png */,
 				6297798116DBA21500AD570B /* vertLine-hd.png */,
@@ -979,6 +1001,10 @@
 				6297798216DBA21500AD570B /* vertLine-hd.png in Resources */,
 				628658F716DCFB4C00B386D0 /* krest.png in Resources */,
 				628658F816DCFB4C00B386D0 /* krug.png in Resources */,
+				62D7B78616DDFAB70075F20D /* krest-ipad.png in Resources */,
+				62D7B78716DDFAB70075F20D /* krug-ipad.png in Resources */,
+				62D7B78D16DE09F90075F20D /* krest-ipadhd.png in Resources */,
+				62D7B78E16DE09F90075F20D /* krug-ipadhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1128,8 @@
 				627C0BA116D28D28003EB460 /* IntroLayer.m in Sources */,
 				6288B7F216D295E000DDF603 /* GameScene.m in Sources */,
 				628A4F2C16D3D34300CE4C88 /* Background.m in Sources */,
+				628D393816DD113D005917A3 /* FinalScene.m in Sources */,
+				62D7B78A16DE026D0075F20D /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,12 +1186,14 @@
 				GCC_PREFIX_HEADER = Krest/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"Krest/libs/kazmath/include\"";
 				INFOPLIST_FILE = Krest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1177,12 +1207,14 @@
 				GCC_PREFIX_HEADER = Krest/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"Krest/libs/kazmath/include\"";
 				INFOPLIST_FILE = Krest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

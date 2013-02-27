@@ -27,7 +27,6 @@
         [self startGame];
     }
     return self;
-
 }
 
 - (void)loadDefault
@@ -47,23 +46,31 @@
 
 - (void)startGame
 {
-    if (self.numberOfPlayers == 0)//if user chose computer game
+    if (self.numberOfPlayers == 0)//user choose computer game
     {
         [self schedule:@selector(makeMotion) interval:1 ];
-    } else if (self.numberOfPlayers == 1)
+    } else if (self.numberOfPlayers == 1)//user choose 1 player
     {
-        if (self.player == 1)
+        if (self.player == 1)// user is 1-st player
         {
             [self touchEnable];
-        } else if (self.player == 2)
+        } else if (self.player == 2)// user is 2-st player
         {
             [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
         }
-    } else if (self.numberOfPlayers == 2)
+    } else if (self.numberOfPlayers == 2)//user will play with another user
     {
         [self touchEnable];
     }
 }
+
+- (void)onExit
+{
+    [super onExit];
+    [self touchDisable];
+}
+
+#pragma mark - CCTouchOneByOneDelegate
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [self convertTouchToNodeSpace: touch];
@@ -78,6 +85,28 @@
     }
     return YES;
 }
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
+    if (self.number %2 == 1 && self.player == 1 && self.numberOfPlayers == 1) {
+        [self touchDisable];
+        [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
+    } else if (self.number %2 == 0 && self.player == 2 && self.numberOfPlayers == 1) {
+        [self touchDisable];
+        [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
+    }
+}
+
+- (void)touchEnable
+{
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+- (void)touchDisable
+{
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+}
+
+#pragma mark - Drawing
 
 - (void)drawFigureeWithI:(int)i J:(int)j
 {
@@ -101,15 +130,7 @@
     }
 }
 
-- (void)touchEnable
-{
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-}
-
-- (void)touchDisable
-{
-     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-}
+#pragma mark - Checking for result
 
 - (void)checkForWinOrDrawForI:(int)i J:(int)j
 {
@@ -188,35 +209,10 @@
 {
     [self unscheduleAllSelectors];
     [self touchDisable];
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    CCLabelTTF *label = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:64];
-    label.color = ccc3(255, 0, 0);
-    label.position = ccp(size.width/2, 0);
-    [self addChild:label];
-    [CCMenuItemFont setFontSize:20];
-    CCMenuItemFont* main = [CCMenuItemFont itemWithString:@"Go to Main Menu" target:self selector:@selector(mainMenu)];
-    CCMenu* menu = [CCMenu menuWithItems:main, nil];
-    menu.position = CGPointZero;
-    main.position = ccp(100, size.height - 50);
-    menu.color = ccc3(0, 0, 255);
-    [self addChild:menu];
-    id actionMove = [CCMoveTo actionWithDuration:2 position:CGPointMake(size.width/2, size.height - 30)];
-    [label runAction:[CCSequence actions:actionMove, [CCDelayTime actionWithDuration:2],
-                      [CCCallFunc actionWithTarget:self selector:@selector(gameOverDone)],
-                      nil]];
-    
+    FinalScene* background = [FinalScene node];
+    background.title = title;
+    [self addChild:background];
 }
-
-- (void)gameOverDone
-{
-	[[CCDirector sharedDirector] replaceScene:[GameScene node]] ;
-}
-
-- (void)mainMenu
-{
-    [[CCDirector sharedDirector] popScene];
-}
-
 
 /*- (void)checkWarning:(int)alien
 {
@@ -233,15 +229,7 @@
     }
 }*/
 
-- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-    if (self.number %2 == 1 && self.player == 1 && self.numberOfPlayers == 1) {
-        [self touchDisable];
-        [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
-    } else if (self.number %2 == 0 && self.player == 2 && self.numberOfPlayers == 1) {
-        [self touchDisable];
-        [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
-    }
-}
+#pragma mark - Computer Brain
 
 - (void)makeMotion
 {
@@ -314,6 +302,8 @@
     return;
 }
 
+#pragma mark - small functions
+
 - (int)anotherPlayer:(int)player
 {
     if (player == 1) {
@@ -350,12 +340,5 @@
     NSLog(@"Error in function NumberForPlayer. Player is %i",player);
     return nil;
 }
-
-- (void)onExit
-{
-    [super onExit];
-    [self touchDisable];
-}
-
 
 @end

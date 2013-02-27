@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-
+#import "Constants.h"
 @interface Background : CCLayerColor {}
 @property float startHeight;
 @property float startWidth;

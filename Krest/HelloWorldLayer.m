@@ -13,6 +13,7 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+
 @interface  HelloWorldLayer()
 
 @property CCMenuItem* item1Player;
@@ -54,16 +55,15 @@
 	if( self=[super initWithColor:ccc4(255,255,0,145)]) {
         self.optionShow = NO;
         self.size = [[CCDirector sharedDirector] winSize];
-        //self.size = CGSizeMake(640, 1136);
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Krestiki-Noliki" fontName:@"Marker Felt" fontSize:64];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Krestiki-Noliki" fontName:@"Marker Felt" fontSize:SIZE_OF_TITLE*self.size.height];
         
         
         
-        label.position =  ccp( self.size.width /2 , self.size.height - 30 );
+        label.position =  ccp( self.size.width /2 , self.size.height - DISTANCE * self.size.height );
         [self addChild: label];
         
         
-        [CCMenuItemFont setFontSize:28];
+        [CCMenuItemFont setFontSize:SIZE_OF_MENU*self.size.height];
         self.item1Player = [CCMenuItemFont itemWithString:@"1 player" target:self selector:@selector(press1Player)];
         
         self.item2Players = [CCMenuItemFont itemWithString:@"2 players" block:^(id sender) {
@@ -83,13 +83,13 @@
         
         self.menu.position = CGPointZero;
         self.menu.color = ccc3(0, 255, 0);
-        self.item1Player.position = ccp( self.size.width/2,self.size.height - 80);
-        self.item2Players.position = ccp(  self.size.width/2,self.size.height - 130);
-        self.itemComputers.position = ccp( self.size.width/2,self.size.height - 180);
+        self.item1Player.position = ccp( self.size.width/2,self.size.height - 2 * DISTANCE * self.size.height);
+        self.item2Players.position = ccp(  self.size.width/2,self.size.height - 3* DISTANCE * self.size.height);
+        self.itemComputers.position = ccp( self.size.width/2,self.size.height - 4 * DISTANCE * self.size.height);
         [self addChild: self.menu];
         
-        CCLabelTTF *autor = [CCLabelTTF labelWithString:@"by Sander" fontName:@"Marker Felt" fontSize:30];
-        [autor setPosition:ccp( self.size.width - 70, 30)];
+        CCLabelTTF *autor = [CCLabelTTF labelWithString:@"by Sander" fontName:@"Marker Felt" fontSize:SIZE_OF_MENU*self.size.height];
+        [autor setPosition:ccp( self.size.width - 1.5 * DISTANCE * self.size.height, 0.5 * DISTANCE * self.size.height)];
         [self addChild:autor];
         
         CCMenu *menuOption = [CCMenu menuWithItems:self.itemKrestik, self.itemNolik, nil];
@@ -112,7 +112,7 @@
             [[app director] pushScene:[GameScene node]];
         }];
         
-        _itemNolik.position = ccp(self.size.width/2, -50);
+        _itemNolik.position = ccp(self.size.width/2, - DISTANCE * self.size.height);
     }
     return _itemNolik;
 }
@@ -127,7 +127,7 @@
             AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
             [[app director] pushScene:[GameScene node]];
         }];
-        _itemKrestik.position = ccp(self.size.width/2, -50);
+        _itemKrestik.position = ccp(self.size.width/2, - DISTANCE * self.size.height);
     }
     return _itemKrestik;
 }
@@ -137,12 +137,12 @@
     if (!self.optionShow) {
         [self stopAllActions];
         self.optionShow = YES;
-        id actionMove1 = [CCMoveTo actionWithDuration:0.3 position:ccp(self.size.width/2, self.size.height - 130)];
-        id actionMove2 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, self.size.height - 180)];
+        id actionMove1 = [CCMoveTo actionWithDuration:0.3 position:ccp(self.size.width/2, self.size.height - 3 * DISTANCE * self.size.height)];
+        id actionMove2 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, self.size.height - 4 * DISTANCE * self.size.height)];
         [self.itemKrestik runAction:actionMove1];
         [self.itemNolik runAction:actionMove2];
-        id actionMove3 = [CCMoveTo actionWithDuration:0.7 position:ccp(-50, self.size.height - 130)];
-        id actionMove4 = [CCMoveTo actionWithDuration:0.8 position:ccp(self.size.width + 60, self.size.height - 180)];
+        id actionMove3 = [CCMoveTo actionWithDuration:0.7 position:ccp(- 1.5 * DISTANCE * self.size.height, self.size.height - 3 * DISTANCE * self.size.height)];
+        id actionMove4 = [CCMoveTo actionWithDuration:0.8 position:ccp(self.size.width + 1.5 * DISTANCE * self.size.height, self.size.height - 4 * DISTANCE * self.size.height)];
         [self.item2Players runAction:actionMove3];
         [self.itemComputers runAction: [CCSequence actions:actionMove4, [CCCallBlock actionWithBlock:^{
             [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
@@ -172,12 +172,12 @@
 
 - (void)undoPress1Player
 {
-    id actionMove1 = [CCMoveTo actionWithDuration:0.3 position:ccp(self.size.width/2, -30)];
-    id actionMove2 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, -30)];
+    id actionMove1 = [CCMoveTo actionWithDuration:0.3 position:ccp(self.size.width/2, - DISTANCE * self.size.height)];
+    id actionMove2 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, - DISTANCE * self.size.height)];
     [self.itemKrestik runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.3], actionMove2, nil]];
     [self.itemNolik runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.3], actionMove1, nil]];
-    id actionMove3 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, self.size.height - 130)];
-    id actionMove4 = [CCMoveTo actionWithDuration:0.7 position:ccp(self.size.width/2, self.size.height - 180)];
+    id actionMove3 = [CCMoveTo actionWithDuration:0.5 position:ccp(self.size.width/2, self.size.height - 3 * DISTANCE * self.size.height)];
+    id actionMove4 = [CCMoveTo actionWithDuration:0.7 position:ccp(self.size.width/2, self.size.height - 4 * DISTANCE * self.size.height)];
     [self.item2Players runAction:actionMove3];
     [self.itemComputers runAction:actionMove4];
     self.itemNolik.color = ccc3(255, 255, 255);

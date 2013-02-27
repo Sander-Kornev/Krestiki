@@ -8,8 +8,7 @@
 
 #import "Background.h"
 
-#define HEIGHT_OF_LINE_PERC 0.75f
-#define SIZE_FIGURE 160
+
 
 @interface Background()
 
@@ -21,20 +20,6 @@
 {
     if ( self = [super initWithColor:ccc4(255,255,255,255)])
     {
-       /* CGSize size = [[CCDirector sharedDirector] winSize];
-        for (int i = 0; i < 2; i++) {
-            CCSprite* vertLine = [[CCSprite alloc] initWithFile:@"vertLine.png"];
-            vertLine.position = ccp( 80 * i + 244, size.height/2 );
-            [self addChild:vertLine];
-        }
-        for (int i = 0; i < 2; i++) {
-            CCSprite* horLine = [[CCSprite alloc] initWithFile:@"horLine.png"];
-            horLine.position = ccp( size.width/2, 80 * i + 120 );
-            [self addChild:horLine];
-        }
-
-        */
-
     }
     return self;
 }
@@ -44,12 +29,11 @@
     [super draw];
     
     CGSize size = [[CCDirector sharedDirector] winSize];
-    CGSize sizeInPixels = [[CCDirector sharedDirector] winSizeInPixels];
-    int pixelsInPoint = sizeInPixels.height/size.height;
-    self.figureInPoints = SIZE_FIGURE/pixelsInPoint;
+    int sizeFigure = SIZE_FIGURE*size.height;
+    self.figureInPoints = sizeFigure;
     self.startHeight = size.height*(1 - HEIGHT_OF_LINE_PERC)/2;
     self.startWidth = size.width/2 - size.height*HEIGHT_OF_LINE_PERC/2;
-    glLineWidth(10); 
+    glLineWidth(SIZE_LINE*size.height);
     ccDrawColor4B(0, 0, 0, 255); 
     //draw vertikal line
     for (int i = 0; i < 2; i++) {

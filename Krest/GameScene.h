@@ -11,6 +11,7 @@
 #import "CCTouchDispatcher.h"
 #import "Background.h"
 #import "HelloWorldLayer.h"
+#import "FinalScene.h"
 
 @interface GameScene : CCScene <CCTouchOneByOneDelegate>
 
