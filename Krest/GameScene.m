@@ -122,17 +122,18 @@
     CGPoint point = ccp(self.background.startWidth + self.background.figureInPoints * (i + 0.5)  , self.background.startHeight + self.background.figureInPoints * (j + 0.5));
     [figure setPosition:point];
     [self addChild:figure];
-    [self checkForWinOrDrawForI:i J:j];
-    self.number++;
-    if (self.numberOfPlayers == 1 && self.computerMoved) {
-        [self touchEnable];
-        self.computerMoved = NO;
+    if (![self checkForWinOrDrawForI:i J:j]) {
+        self.number++;
+        if (self.numberOfPlayers == 1 && self.computerMoved) {
+            [self touchEnable];
+            self.computerMoved = NO;
+        }
     }
 }
 
 #pragma mark - Checking for result
 
-- (void)checkForWinOrDrawForI:(int)i J:(int)j
+- (BOOL)checkForWinOrDrawForI:(int)i J:(int)j
 {
     int player = self.number%2 +1;
     NSString* winTable = Nil;
@@ -142,14 +143,17 @@
         } else {
             winTable = @"Nolik win";
         }
-    };
+    }
     if (winTable)
     {
         [self showFinalTitle:winTable];
+        return YES;
     } else if ([self checkForDraw])
     {
         [self showFinalTitle:@"Draw"];
+        return YES;
     }
+    return NO;
 }
 
 - (BOOL)winPlayer:(int)player ForI:(int)i J:(int)j inArray:(NSMutableArray*)items
