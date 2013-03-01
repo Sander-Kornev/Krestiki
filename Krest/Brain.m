@@ -1,24 +1,23 @@
 //
-//  GameScene.m
+//  Brai.m
 //  Krest
 //
-//  Created by ITC on 18.02.13.
+//  Created by ITC on 01.03.13.
 //  Copyright 2013 ITC. All rights reserved.
 //
 
-#import "GameScene.h"
-@interface GameScene()
-//@property int number;
-//@property NSMutableArray* items;
-//@property int player;
-//@property int numberOfPlayers;
-//@property BOOL computerMoved;
-@property (strong) Background* background;
-@property (strong) Brain* brain;
+#import "Brain.h"
+@interface Brain()
+
+@property int number;
+@property NSMutableArray* items;
+@property int player;
+@property int numberOfPlayers;
+@property BOOL computerMoved;
+
 @end
 
-@implementation GameScene
-
+@implementation Brain
 
 - (id)init
 {
@@ -32,16 +31,7 @@
 
 - (void)loadDefault
 {
-    self.background = [Background node];
-    [self addChild:self.background];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(touchEnable) name:@"User move" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(touchDisable) name:@"Computer move" object:nil];
-    //Brain* brain = [Brain node];
-    self.brain = [[Brain alloc] init];
-    self.brain.gameScene = self;
-    [self.brain startGame];
-    
-    /*self.numberOfPlayers = [[[NSUserDefaults standardUserDefaults] valueForKey: @"NumberOfPlayers"] integerValue];
+    self.numberOfPlayers = [[[NSUserDefaults standardUserDefaults] valueForKey: @"NumberOfPlayers"] integerValue];
     self.player = [[[NSUserDefaults standardUserDefaults] valueForKey:@"Player"] integerValue];
     self.number = 0;
     self.computerMoved = NO;
@@ -49,10 +39,10 @@
     self.items = [[NSMutableArray alloc] initWithCapacity: 3];
     for (int i = 0; i < 3; i++) {
         [self.items insertObject:[NSMutableArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil] atIndex:i];
-    }*/
+    }
 }
 
-/*- (void)startGame
+- (void)startGame
 {
     if (self.numberOfPlayers == 0)//user choose computer game
     {
@@ -61,81 +51,68 @@
     {
         if (self.player == 1)// user is 1-st player
         {
-            [self touchEnable];
+            [self userMove];
         } else if (self.player == 2)// user is 2-st player
         {
-            [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
+            [self schedule:@selector(makeMotion)  interval:0 repeat:0 delay:0];
+            //[self makeMotion];
         }
     } else if (self.numberOfPlayers == 2)//user will play with another user
     {
-        [self touchEnable];
+        [self userMove];
     }
-}*/
+}
 
-- (void)onExit
+- (void)userMove
 {
-    [super onExit];
-    [self touchDisable];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"User move" object:self];
 }
 
-#pragma mark - CCTouchOneByOneDelegate
+- (void)computerMove
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Computer move" object:self];
+}
 
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CGPoint location = [self convertTouchToNodeSpace: touch];
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            CGRect rect = CGRectMake(self.background.startWidth + self.background.figureInPoints * i, self.background.startHeight + self.background.figureInPoints * j, self.background.figureInPoints, self.background.figureInPoints);
-            if (CGRectContainsPoint(rect, location) && [self.brain fieldIsEmptyOnI:i J:j]) {
-                [self.brain drawFigureeWithI:i J:j];
-                break;
-            }
-        }
+- (BOOL)fieldIsEmptyOnI:(int)i J:(int)j
+{
+    if ([self.items[i][j] integerValue] == 0) {
+        return YES;
+    } else {
+        return NO;
     }
-    return YES;
 }
 
-- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-    /*if (self.number %2 == 1 && self.player == 1 && self.numberOfPlayers == 1) {
-        [self touchDisable];
+- (void)nextMove
+{
+    if (self.number %2 == 1 && self.player == 1 && self.numberOfPlayers == 1) {
+        [self computerMove];
         [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
     } else if (self.number %2 == 0 && self.player == 2 && self.numberOfPlayers == 1) {
-        [self touchDisable];
+        [self computerMove];
         [self schedule:@selector(makeMotion) interval:0 repeat:0 delay:1];
-    }*/
-    [self.brain nextMove];
-}
-
-- (void)touchEnable
-{
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-}
-
-- (void)touchDisable
-{
-    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-}
-
-#pragma mark - Drawing
-
-- (void)drawFigureeWithI:(int)i J:(int)j forPlayer:(int)player
-{
-    CCSprite* figure;
-    if (player == 1)
-    {
-        figure = [[CCSprite alloc] initWithFile: @"krest.png"];
-    } else if(player ==2)
-    {
-        figure = [[CCSprite alloc] initWithFile: @"krug.png"];
     }
-    CGPoint point = ccp(self.background.startWidth + self.background.figureInPoints * (i + 0.5)  , self.background.startHeight + self.background.figureInPoints * (j + 0.5));
-    [figure setPosition:point];
-    [self addChild:figure];
 }
 
-#pragma mark - Checking for result
+- (void)drawFigureeWithI:(int)i J:(int)j
+{
+    if (self.number %2 == 0)
+    {
+        [self.gameScene drawFigureeWithI:i J:j forPlayer:1];
+        self.items[i][j] = [NSNumber numberWithInt: 1];
+    } else {
+        [self.gameScene drawFigureeWithI:i J:j forPlayer:2];
+        self.items[i][j] = [NSNumber numberWithInt: -1];
+    }
+    if (![self checkForWinOrDrawForI:i J:j]) {
+        self.number++;
+        if (self.numberOfPlayers == 1 && self.computerMoved) {
+            [self userMove];
+            self.computerMoved = NO;
+        }
+    }
+}
 
-/*- (BOOL)checkForWinOrDrawForI:(int)i J:(int)j
+- (BOOL)checkForWinOrDrawForI:(int)i J:(int)j
 {
     int player = self.number%2 +1;
     NSString* winTable = Nil;
@@ -148,11 +125,11 @@
     }
     if (winTable)
     {
-        [self showFinalTitle:winTable];
+        [self.gameScene showFinalTitle:winTable];
         return YES;
     } else if ([self checkForDraw])
     {
-        [self showFinalTitle:@"Draw"];
+        [self.gameScene showFinalTitle:@"Draw"];
         return YES;
     }
     return NO;
@@ -210,30 +187,21 @@
     }
     return draw;
 }
-*/
-- (void)showFinalTitle:(NSString*)title
-{
-    [self unscheduleAllSelectors];
-    [self touchDisable];
-    FinalScene* background = [FinalScene node];
-    background.title = title;
-    [self addChild:background];
-}
 
 /*- (void)checkWarning:(int)alien
-{
-   
-    for (int i = 0; i < 3; i++) {
-        int sum = 0;
-        for (int j = 0; j < 3; j++) {
-            if ([self.items[i][j] integerValue] == alien)
-            {
-                sum++;
-            }
-        }
-        NSLog(@"for column %i %i",i,sum);
-    }
-}
+ {
+ 
+ for (int i = 0; i < 3; i++) {
+ int sum = 0;
+ for (int j = 0; j < 3; j++) {
+ if ([self.items[i][j] integerValue] == alien)
+ {
+ sum++;
+ }
+ }
+ NSLog(@"for column %i %i",i,sum);
+ }
+ }*/
 
 #pragma mark - Computer Brain
 
@@ -245,7 +213,7 @@
         if (self.number %2 == 0) {
             [self makeMotionForPlayer:1];
         } else if (self.number %2 == 1) {
-           [self makeMotionForPlayer:2];
+            [self makeMotionForPlayer:2];
         } else {
             NSLog(@"something wrong in makeMotion");
         }
@@ -346,5 +314,4 @@
     NSLog(@"Error in function NumberForPlayer. Player is %i",player);
     return nil;
 }
-*/
 @end

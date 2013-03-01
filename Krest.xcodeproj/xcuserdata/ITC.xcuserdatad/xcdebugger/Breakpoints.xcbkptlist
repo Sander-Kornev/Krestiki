@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
+         startingLineNumber = "84"
+         endingLineNumber = "84"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.h"
-         timestampString = "383587001.784303"
+         timestampString = "383755479.109641"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "16"
-         endingLineNumber = "16"
+         startingLineNumber = "17"
+         endingLineNumber = "17"
          landmarkName = "@interface GameScene"
          landmarkType = "2">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "80"
-         endingLineNumber = "80"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,12 +60,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
-         landmarkName = "-drawFigureeWithI:J:"
+         startingLineNumber = "133"
+         endingLineNumber = "133"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,143 +73,143 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "204"
-         endingLineNumber = "204"
-         landmarkName = "-checkForDraw"
-         landmarkType = "5">
+         startingLineNumber = "206"
+         endingLineNumber = "206"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
-         landmarkName = "-checkForDraw"
-         landmarkType = "5">
+         startingLineNumber = "205"
+         endingLineNumber = "205"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "346"
-         endingLineNumber = "346"
-         landmarkName = "-numberForPlayer:"
-         landmarkType = "5">
+         startingLineNumber = "348"
+         endingLineNumber = "348"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "174"
-         endingLineNumber = "174"
-         landmarkName = "-winPlayer:ForI:J:inArray:"
-         landmarkType = "5">
+         startingLineNumber = "176"
+         endingLineNumber = "176"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "184"
-         endingLineNumber = "184"
-         landmarkName = "-winPlayer:ForI:J:inArray:"
-         landmarkType = "5">
+         startingLineNumber = "186"
+         endingLineNumber = "186"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "194"
-         endingLineNumber = "194"
-         landmarkName = "-winPlayer:ForI:J:inArray:"
-         landmarkType = "5">
+         startingLineNumber = "196"
+         endingLineNumber = "196"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "305"
-         endingLineNumber = "305"
-         landmarkName = "-makeMotionForPlayer:"
-         landmarkType = "5">
+         startingLineNumber = "307"
+         endingLineNumber = "307"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "258"
-         endingLineNumber = "258"
-         landmarkName = "-makeMotionForPlayer:"
-         landmarkType = "5">
+         startingLineNumber = "260"
+         endingLineNumber = "260"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "288"
-         endingLineNumber = "288"
-         landmarkName = "-makeMotionForPlayer:"
-         landmarkType = "5">
+         startingLineNumber = "290"
+         endingLineNumber = "290"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "337"
-         endingLineNumber = "337"
-         landmarkName = "-numberForPlayer:"
-         landmarkType = "5">
+         startingLineNumber = "339"
+         endingLineNumber = "339"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
-         landmarkName = "-winPlayer:ForI:J:inArray:"
-         landmarkType = "5">
+         startingLineNumber = "168"
+         endingLineNumber = "168"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -242,12 +242,77 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "261"
-         endingLineNumber = "261"
-         landmarkName = "-makeMotionForPlayer:"
+         startingLineNumber = "263"
+         endingLineNumber = "263"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "273"
+         endingLineNumber = "273"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "270"
+         endingLineNumber = "270"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "243"
+         endingLineNumber = "243"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383755479.109641"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -255,12 +320,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
-         landmarkName = "-winPlayer:ForI:J:inArray:"
+         startingLineNumber = "242"
+         endingLineNumber = "242"
+         landmarkName = "@implementation GameScene"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
+         landmarkName = "-ccTouchBegan:withEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/HelloWorldLayer.m"
+         timestampString = "383751422.210404"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "196"
+         endingLineNumber = "196"
+         landmarkName = "-onEnter"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -268,46 +359,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "271"
-         endingLineNumber = "271"
-         landmarkName = "-makeMotionForPlayer:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "268"
-         endingLineNumber = "268"
-         landmarkName = "-makeMotionForPlayer:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "241"
-         endingLineNumber = "241"
-         landmarkName = "-makeMotion"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383755479.109641"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "28"
@@ -320,77 +372,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383755479.109641"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "240"
-         endingLineNumber = "240"
-         landmarkName = "-makeMotion"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
-         landmarkName = "-ccTouchBegan:withEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/HelloWorldLayer.m"
-         timestampString = "383648586.599285"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "190"
-         endingLineNumber = "190"
-         landmarkName = "-touchDisable"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
-         landmarkName = "-init"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
-         landmarkName = "-drawFigureeWithI:J:"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -398,24 +398,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/HelloWorldLayer.m"
-         timestampString = "383648586.599285"
+         timestampString = "383751422.210404"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "196"
-         endingLineNumber = "196"
-         landmarkName = "-onEnter"
-         landmarkType = "5">
+         startingLineNumber = "202"
+         endingLineNumber = "202"
+         landmarkName = "@implementation HelloWorldLayer"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/HelloWorldLayer.m"
-         timestampString = "383648586.599285"
+         timestampString = "383751422.210404"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "173"
-         endingLineNumber = "173"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
          landmarkName = "-undoPress1Player"
          landmarkType = "5">
       </FileBreakpoint>
@@ -450,24 +450,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/HelloWorldLayer.m"
-         timestampString = "383648586.599285"
+         timestampString = "383751422.210404"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
-         landmarkName = "-ccTouchBegan:withEvent:"
-         landmarkType = "5">
+         startingLineNumber = "172"
+         endingLineNumber = "172"
+         landmarkName = "@implementation HelloWorldLayer"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/HelloWorldLayer.m"
-         timestampString = "383648586.599285"
+         timestampString = "383751422.210404"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "135"
-         endingLineNumber = "135"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-press1Player"
          landmarkType = "5">
       </FileBreakpoint>
@@ -541,11 +541,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -554,12 +554,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "123"
-         endingLineNumber = "123"
-         landmarkName = "-drawFigureeWithI:J:"
+         startingLineNumber = "132"
+         endingLineNumber = "132"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -567,12 +567,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
-         landmarkName = "-drawFigureeWithI:J:"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -580,12 +580,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
-         landmarkName = "-drawFigureeWithI:J:"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -593,11 +593,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "214"
-         endingLineNumber = "214"
+         startingLineNumber = "216"
+         endingLineNumber = "216"
          landmarkName = "-showFinalTitle:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -632,11 +632,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "215"
-         endingLineNumber = "215"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
          landmarkName = "-showFinalTitle:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -645,11 +645,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383822942.951991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
          landmarkName = "-touchDisable"
          landmarkType = "5">
       </FileBreakpoint>
@@ -657,13 +657,130 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.h"
+         timestampString = "383822942.951991"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "23"
+         endingLineNumber = "23"
+         landmarkName = "@interface Brain"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383822501.388151"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "computerMoved"
+         landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383822678.255018"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383822682.936334"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-startGame"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383822686.567753"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "210"
+         endingLineNumber = "210"
+         landmarkName = "-makeMotion"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383822737.938722"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-drawFigureeWithI:J:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
          filePath = "Krest/GameScene.m"
-         timestampString = "383735357.459234"
+         timestampString = "383823015.591364"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "131"
          endingLineNumber = "131"
-         landmarkName = "-drawFigureeWithI:J:"
+         landmarkName = "-drawFigureeWithI:J:forPlayer:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383823186.133867"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-fieldIsEmptyOnI:J:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/Brain.m"
+         timestampString = "383823309.62358"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-loadDefault"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Krest/GameScene.m"
+         timestampString = "383824392.373371"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
+         landmarkName = "-loadDefault"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

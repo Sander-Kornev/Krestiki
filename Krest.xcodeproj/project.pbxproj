@@ -149,6 +149,7 @@
 		6293094E16D680A800942462 /* krug-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6293094A16D680A800942462 /* krug-hd.png */; };
 		6293094F16D680A800942462 /* horLine-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6293094B16D680A800942462 /* horLine-hd.png */; };
 		6297798216DBA21500AD570B /* vertLine-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6297798116DBA21500AD570B /* vertLine-hd.png */; };
+		62C4198716E0A9A000354BD0 /* Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C4198616E0A9A000354BD0 /* Brain.m */; };
 		62CF87A616D371A400503502 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF87A416D371A400503502 /* moon.png */; };
 		62CF87A716D371A400503502 /* roket.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF87A516D371A400503502 /* roket.png */; };
 		62D7B78616DDFAB70075F20D /* krest-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7B78416DDFAB70075F20D /* krest-ipad.png */; };
@@ -450,6 +451,8 @@
 		6293094A16D680A800942462 /* krug-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krug-hd.png"; path = "../../../../../Documents/krug-hd.png"; sourceTree = "<group>"; };
 		6293094B16D680A800942462 /* horLine-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "horLine-hd.png"; path = "../../../../../Documents/horLine-hd.png"; sourceTree = "<group>"; };
 		6297798116DBA21500AD570B /* vertLine-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vertLine-hd.png"; path = "../../../../../Documents/vertLine-hd.png"; sourceTree = "<group>"; };
+		62C4198516E0A9A000354BD0 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brain.h; sourceTree = "<group>"; };
+		62C4198616E0A9A000354BD0 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brain.m; sourceTree = "<group>"; };
 		62CF87A416D371A400503502 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = SOURCE_ROOT; };
 		62CF87A516D371A400503502 /* roket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roket.png; sourceTree = SOURCE_ROOT; };
 		62D7B78416DDFAB70075F20D /* krest-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "krest-ipad.png"; path = "../../../../../Documents/krest-ipad.png"; sourceTree = "<group>"; };
@@ -518,20 +521,22 @@
 			children = (
 				627C0B9916D28D28003EB460 /* AppDelegate.h */,
 				627C0B9A16D28D28003EB460 /* AppDelegate.m */,
-				627C0B9C16D28D28003EB460 /* HelloWorldLayer.h */,
-				627C0B9D16D28D28003EB460 /* HelloWorldLayer.m */,
-				62D7B78816DE026C0075F20D /* Constants.h */,
-				62D7B78916DE026D0075F20D /* Constants.m */,
-				627C0B9F16D28D28003EB460 /* IntroLayer.h */,
-				627C0BA016D28D28003EB460 /* IntroLayer.m */,
 				628A4F2A16D3D34300CE4C88 /* Background.h */,
 				628A4F2B16D3D34300CE4C88 /* Background.m */,
-				6288B7F016D295E000DDF603 /* GameScene.h */,
-				6288B7F116D295E000DDF603 /* GameScene.m */,
+				62C4198516E0A9A000354BD0 /* Brain.h */,
+				62C4198616E0A9A000354BD0 /* Brain.m */,
+				62D7B78816DE026C0075F20D /* Constants.h */,
+				62D7B78916DE026D0075F20D /* Constants.m */,
 				628D393616DD113D005917A3 /* FinalScene.h */,
 				628D393716DD113D005917A3 /* FinalScene.m */,
-				627C0A0C16D28D1E003EB460 /* Resources */,
+				6288B7F016D295E000DDF603 /* GameScene.h */,
+				6288B7F116D295E000DDF603 /* GameScene.m */,
+				627C0B9C16D28D28003EB460 /* HelloWorldLayer.h */,
+				627C0B9D16D28D28003EB460 /* HelloWorldLayer.m */,
+				627C0B9F16D28D28003EB460 /* IntroLayer.h */,
+				627C0BA016D28D28003EB460 /* IntroLayer.m */,
 				627C0A2416D28D1F003EB460 /* libs */,
+				627C0A0C16D28D1E003EB460 /* Resources */,
 				627C0B9516D28D28003EB460 /* Supporting Files */,
 			);
 			path = Krest;
@@ -1130,6 +1135,7 @@
 				628A4F2C16D3D34300CE4C88 /* Background.m in Sources */,
 				628D393816DD113D005917A3 /* FinalScene.m in Sources */,
 				62D7B78A16DE026D0075F20D /* Constants.m in Sources */,
+				62C4198716E0A9A000354BD0 /* Brain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
